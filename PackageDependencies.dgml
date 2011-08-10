@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="TopToBottom" Layout="Sugiyama" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="AutoMapper 1.1.0.118" Category="Package" Label="AutoMapper 1.1.0.118" />
+    <Node Id="CommonServiceLocator 1.0" Category="Package" Label="CommonServiceLocator 1.0" />
+    <Node Id="EF.CodeFirst.Common 0.0.1" Category="Package" Label="EF.CodeFirst.Common 0.0.1" />
+    <Node Id="EFHooks 1.0.1" Category="Package" Label="EFHooks 1.0.1" />
+    <Node Id="EntityFramework 4.1.10715.0" Category="Package" Label="EntityFramework 4.1.10715.0" />
+    <Node Id="Simple.Extensions 0.0.1" Category="Package" Label="Simple.Extensions 0.0.1" />
+    <Node Id="Simple.Mvc" Category="Project" Label="Simple.Mvc" />
+    <Node Id="elmah 1.2.0.1" Category="Package" Label="elmah 1.2.0.1" />
+    <Node Id="elmah.corelibrary 1.2" Category="Package" Label="elmah.corelibrary 1.2" />
+  </Nodes>
+  <Links>
+    <Link Source="EF.CodeFirst.Common 0.0.1" Target="AutoMapper 1.1.0.118" Category="Package Dependency" />
+    <Link Source="EF.CodeFirst.Common 0.0.1" Target="CommonServiceLocator 1.0" Category="Package Dependency" />
+    <Link Source="EF.CodeFirst.Common 0.0.1" Target="EFHooks 1.0.1" Category="Package Dependency" />
+    <Link Source="EF.CodeFirst.Common 0.0.1" Target="Simple.Extensions 0.0.1" Category="Package Dependency" />
+    <Link Source="EFHooks 1.0.1" Target="EntityFramework 4.1.10715.0" Category="Package Dependency" />
+    <Link Source="Simple.Mvc" Target="EF.CodeFirst.Common 0.0.1" Category="Installed Package" />
+    <Link Source="Simple.Mvc" Target="elmah 1.2.0.1" Category="Installed Package" />
+    <Link Source="elmah 1.2.0.1" Target="elmah.corelibrary 1.2" Category="Package Dependency" />
+  </Links>
+  <Categories>
+    <Category Id="Installed Package" />
+    <Category Id="Package" />
+    <Category Id="Package Dependency" />
+    <Category Id="Project" />
+  </Categories>
+  <Properties>
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Progression.Layout.GraphDirection" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="Layout" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Project" ValueLabel="True">
+      <Condition Expression="HasCategory('Project')" />
+      <Setter Property="Background" Value="Blue" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Package Dependency" ValueLabel="True">
+      <Condition Expression="HasCategory('Package Dependency')" />
+      <Setter Property="Background" Value="Yellow" />
+    </Style>
+  </Styles>
+</DirectedGraph>
